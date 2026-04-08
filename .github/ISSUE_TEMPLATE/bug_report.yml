@@ -1,0 +1,94 @@
+name: Bug Report
+description: Report a bug in a Praxis OS component
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug. Please fill out the fields below so we can reproduce and resolve the issue efficiently.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: A brief description of the bug.
+      placeholder: "e.g., Budget enforcement does not trigger on token overshoot"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected repository / area
+      description: Which component is affected?
+      options:
+        - "praxis (runtime kernel)"
+        - "praxis-os (orchestration layer)"
+        - "docs / examples"
+        - "other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happens instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Minimal steps to reproduce the issue.
+      placeholder: |
+        1. Configure ...
+        2. Call ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      description: Go module version, tag, or commit hash.
+      placeholder: "e.g., v0.3.1 or abc1234"
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Go version, OS, architecture, and any other relevant details.
+      placeholder: |
+        Go 1.22, linux/amd64
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / traces
+      description: Relevant log output, OpenTelemetry traces, or error messages. Redact sensitive information.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else that might help us understand or fix the issue.
+    validations:
+      required: false

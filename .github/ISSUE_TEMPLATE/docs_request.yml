@@ -1,0 +1,46 @@
+name: Docs Request
+description: Report a documentation gap or request an improvement
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve the documentation. Let us know what is unclear, missing, or could be better.
+
+  - type: textarea
+    id: gap
+    attributes:
+      label: What is unclear or missing
+      description: Describe the documentation gap or the information you expected to find.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Repository / doc area
+      description: Which component or documentation area is affected?
+      options:
+        - "praxis (runtime kernel)"
+        - "praxis-os (orchestration layer)"
+        - "organization-level docs (.github)"
+        - "examples"
+        - "other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: blocked
+    attributes:
+      label: Who is blocked by this gap
+      description: Are you or others unable to proceed with a specific task because of missing docs?
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: If you have a specific suggestion for what the documentation should say or how it should be structured, describe it here.
+    validations:
+      required: false

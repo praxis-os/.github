@@ -1,0 +1,87 @@
+name: Proposal
+description: Propose an architecture or design change
+labels: ["proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Proposals are for architecture and design changes, not feature wishlists. Please explain the problem, your proposed direction, and the tradeoffs involved.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What problem does this proposal address? Be specific.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why this matters
+      description: What is the impact of not solving this? Who is affected?
+    validations:
+      required: true
+
+  - type: textarea
+    id: direction
+    attributes:
+      label: Proposed direction
+      description: Describe your approach. Include enough detail for reviewers to evaluate the design, but this does not need to be a full specification.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: boundary
+    attributes:
+      label: Repository / boundary affected
+      description: Which layer does this proposal target?
+      options:
+        - "praxis (runtime kernel)"
+        - "praxis-os (orchestration layer)"
+        - "cross-layer"
+        - "docs / examples / benchmarks"
+        - "other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What other approaches did you consider, and why were they rejected?
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and tradeoffs
+      description: What are the downsides or risks of this proposal?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: api_impact
+    attributes:
+      label: Public API impact
+      description: Does this change add, modify, or remove public API surface?
+      options:
+        - "No public API changes"
+        - "New public API"
+        - "Changes to existing public API"
+        - "Removes existing public API"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: operational_impact
+    attributes:
+      label: Operational impact
+      description: Does this proposal affect any of the following?
+      options:
+        - label: Observability / tracing
+        - label: Policy enforcement
+        - label: Budget guardrails
+        - label: Trust boundaries / security
+        - label: None of the above
