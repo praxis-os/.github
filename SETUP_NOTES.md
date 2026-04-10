@@ -24,7 +24,7 @@ GitHub organization settings that are not fully expressed in git-tracked files. 
 **When additional repos are available:**
 
 1. `praxis`
-2. docs repo
+2. `praxis-docs`
 3. examples repo
 4. benchmarks repo
 5. `praxis-os`

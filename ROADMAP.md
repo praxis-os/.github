@@ -19,7 +19,6 @@ The immediate priority is **`praxis`**, the runtime kernel.
 
 ## Near-term
 
-- Public documentation site
 - Examples repository with representative usage patterns
 - Benchmarks repository for performance characterization
 - Expanded contributor documentation and development guides
