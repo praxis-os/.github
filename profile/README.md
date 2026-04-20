@@ -4,7 +4,8 @@ Production-grade Go ecosystem for building and operating agentic systems.
 
 ## What exists today
 
-- **[`praxis`](https://github.com/praxis-os/praxis)** — the runtime kernel. A Go library for orchestrating LLM agent invocations with a typed finite state machine, four-phase policy hooks, budget enforcement, structured error taxonomy, and mandatory OpenTelemetry observability. This is the current public focus.
+- **[`praxis`](https://github.com/praxis-os/praxis)** — the runtime kernel. A Go library for orchestrating LLM agent invocations with a typed finite state machine, four-phase policy hooks, budget enforcement, structured error taxonomy, and mandatory OpenTelemetry observability.
+- **[`praxis-forge`](https://github.com/praxis-os/praxis-forge)** — declarative agent definition and composition layer. Accepts typed `AgentSpec` files, resolves components through a registry of typed factories, and materializes reproducible `BuiltAgent` instances backed by a configured `praxis` orchestrator. Governs tools, policies, filters, budgets, credentials, and MCP bindings at definition time.
 - **[`praxis-docs`](https://github.com/praxis-os/praxis-docs)** — documentation, guides, and design artifacts for the Praxis OS ecosystem.
 
 ## Planned layers
@@ -33,7 +34,7 @@ The goal is infrastructure you can run in production, audit under pressure, and 
 
 ## Project status
 
-Early and intentional. The kernel API is taking shape but has not reached v1.0 stability. Interfaces may evolve. The scope is deliberately narrow — single-invocation runtime semantics first, orchestration later. The quality bar is high; the maturity claim is not.
+Early and intentional. The kernel and composition layer APIs are taking shape but have not reached v1.0 stability. Interfaces may evolve. The scope is deliberate: correct single-invocation semantics and typed agent composition before higher-level orchestration. The quality bar is high; the maturity claim is not.
 
 ## Contributing
 
