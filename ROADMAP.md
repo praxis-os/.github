@@ -26,9 +26,13 @@ Active development across two layers of the stack:
 - Composition adapters and materialization into a real `praxis` `Orchestrator`
 - External registry support (dev-time only)
 
+**[`praxis-docs`](https://github.com/praxis-os/praxis-docs)** — documentation site:
+
+- Content and guides covering kernel and composition layer
+- Design artifacts and architectural references
+
 ## Near-term
 
-- [`praxis-docs`](https://github.com/praxis-os/praxis-docs) — documentation site content and public launch
 - [`praxis-examples`](https://github.com/praxis-os/praxis-examples) — representative usage patterns and reference agents
 - [`praxis-benchmarks`](https://github.com/praxis-os/praxis-benchmarks) — public release of benchmark results
 - Expanded contributor documentation and development guides
