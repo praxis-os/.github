@@ -4,7 +4,9 @@ This roadmap is directional. It reflects current priorities and planned evolutio
 
 ## Current focus
 
-The immediate priority is **`praxis`**, the runtime kernel.
+Active development across two layers of the stack:
+
+**[`praxis`](https://github.com/praxis-os/praxis)** — the invocation kernel:
 
 - Invocation lifecycle correctness and state machine semantics
 - Typed error taxonomy with differentiated retry policies
@@ -17,10 +19,18 @@ The immediate priority is **`praxis`**, the runtime kernel.
 - OpenTelemetry tracing and structured lifecycle events
 - Provider-agnostic LLM interface (Anthropic adapter shipped, OpenAI planned)
 
+**[`praxis-forge`](https://github.com/praxis-os/praxis-forge)** — declarative agent definition, composition, and materialization:
+
+- Typed `AgentSpec` loader with strict validation
+- `ComponentRegistry` with 11 typed factory kinds
+- Composition adapters and materialization into a real `praxis` `Orchestrator`
+- External registry support (dev-time only)
+
 ## Near-term
 
-- Examples repository with representative usage patterns
-- Benchmarks repository for performance characterization
+- [`praxis-docs`](https://github.com/praxis-os/praxis-docs) — documentation site content and public launch
+- [`praxis-examples`](https://github.com/praxis-os/praxis-examples) — representative usage patterns and reference agents
+- [`praxis-benchmarks`](https://github.com/praxis-os/praxis-benchmarks) — public release of benchmark results
 - Expanded contributor documentation and development guides
 - Public design artifacts and RFC process
 
